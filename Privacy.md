@@ -24,9 +24,9 @@ No data is sent to our servers.
 
 3. Third-Party Services
 
-OpenAI: When using the free tier, your text is sent to OpenAI to generate summaries. OpenAI’s privacy policy applies: https://openai.com/policies/privacy-policy/ 
+    OpenAI: When using the free tier, your text is sent to OpenAI to generate summaries. OpenAI’s privacy policy applies: https://openai.com/policies/privacy-policy/ 
 
-Lemon Squeezy: Used only for processing upgrade payments.
+    Lemon Squeezy: Used only for processing upgrade payments.
 
 4. Data Retention
 All data is stored only on your local device using Chrome’s local storage. You can clear it anytime by clearing your browser data or removing the extension.
