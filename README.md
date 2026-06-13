@@ -1,2 +1,0 @@
-# PolicySnap
-Privacy Policy
