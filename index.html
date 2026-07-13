@@ -3,105 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PolicySnap - Insurance Policies Made Clear</title>
+  <title>PolicySnap — Insurance Policies Made Clear</title>
+  <meta name="description" content="PolicySnap turns confusing insurance language into plain English. Paste policy text or upload a PDF. Free monthly summaries or unlimited with your own OpenAI key.">
+  <meta name="theme-color" content="#18181b">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    .hero-bg {
-      background: linear-gradient(135deg, #18181b, #27272a);
+    .hero-glow {
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(36, 32, 245, 0.25), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 50%, rgba(37, 243, 82, 0.08), transparent),
+        #09090b;
+    }
+    .accent-gradient {
+      background: linear-gradient(135deg, #2420f5, #25f352);
+    }
+    .accent-text {
+      background: linear-gradient(135deg, #60a5fa, #34d399);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
   </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100">
-  <div class="max-w-5xl mx-auto px-6 py-16">
+<body class="hero-glow text-zinc-100 antialiased min-h-screen">
+  <div class="max-w-5xl mx-auto px-6 py-14 md:py-20">
+
+    <!-- Nav -->
+    <header class="flex items-center justify-between mb-16 md:mb-20">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 accent-gradient rounded-2xl flex items-center justify-center text-2xl shadow-lg">📋</div>
+        <span class="text-xl font-bold tracking-tight">PolicySnap</span>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/aamiknhapnodkfinodfmblpmggpgfabh?utm_source=policysnap-site"
+         target="_blank" rel="noopener noreferrer"
+         class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">
+        Chrome Web Store →
+      </a>
+    </header>
 
     <!-- Hero -->
-    <div class="text-center mb-20">
-      <div class="inline-flex items-center gap-3 bg-zinc-900 rounded-3xl px-8 py-4 mb-8 border border-zinc-800">
-        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-2xl flex items-center justify-center text-4xl shadow-xl">📋</div>
-        <h1 class="text-6xl font-bold tracking-tight">PolicySnap</h1>
+    <section class="text-center mb-20 md:mb-24">
+      <div class="inline-flex items-center gap-2 bg-zinc-900/80 border border-zinc-800 rounded-full px-4 py-1.5 text-sm text-zinc-400 mb-8">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        Free Chrome extension · No account required
       </div>
-      
-      <h2 class="text-4xl md:text-5xl font-semibold mb-6 leading-tight">
-        Understand your insurance<br>documents in plain English
-      </h2>
-      <p class="text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
-        Paste any confusing policy text and get clear, practical explanations instantly.
+
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-[1.1]">
+        Understand your insurance<br class="hidden sm:block">
+        <span class="accent-text">in plain English</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Paste confusing policy language or upload a full PDF.
+        PolicySnap explains coverage, exclusions, and what actually matters — in clear, practical terms.
       </p>
 
-      <a href="https://chromewebstore.google.com/detail/aamiknhapnodkfinodfmblpmggpgfabh?utm_source=item-share-cb" 
-         target="_blank"
-         class="inline-block bg-gradient-to-r from-blue-600 to-emerald-500 hover:from-blue-500 hover:to-emerald-400 text-white font-semibold text-xl px-12 py-5 rounded-2xl transition-all shadow-lg">
-        Add to Chrome — It's Free
-      </a>
-    </div>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://chromewebstore.google.com/detail/aamiknhapnodkfinodfmblpmggpgfabh?utm_source=policysnap-site"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-block accent-gradient hover:opacity-95 text-white font-semibold text-lg px-10 py-4 rounded-2xl transition-all shadow-lg shadow-blue-900/30">
+          Add to Chrome — Free
+        </a>
+        <p class="text-sm text-zinc-500">
+          10 free summaries / month · Unlimited with your own key
+        </p>
+      </div>
+    </section>
 
     <!-- Features -->
-    <div class="grid md:grid-cols-3 gap-8 mb-20">
-      <div class="bg-zinc-900 rounded-3xl p-10 hover:scale-105 transition-transform">
-        <div class="text-5xl mb-6">⚡</div>
-        <h3 class="text-2xl font-semibold mb-3">Instant Clarity</h3>
-        <p class="text-zinc-400">Paste a sentence or paragraph from any insurance policy and get a clear explanation in seconds.</p>
+    <section class="grid md:grid-cols-3 gap-6 mb-20">
+      <div class="bg-zinc-900/80 border border-zinc-800 rounded-3xl p-8">
+        <div class="text-4xl mb-5">⚡</div>
+        <h2 class="text-xl font-semibold mb-3">Instant clarity</h2>
+        <p class="text-zinc-400 leading-relaxed">
+          Paste a sentence, paragraph, or section from any insurance policy and get a clear explanation in seconds.
+        </p>
       </div>
-      <div class="bg-zinc-900 rounded-3xl p-10 hover:scale-105 transition-transform">
-        <div class="text-5xl mb-6">📖</div>
-        <h3 class="text-2xl font-semibold mb-3">Real-World Meaning</h3>
-        <p class="text-zinc-400">Understand what your coverage actually means — not just the legal wording.</p>
+      <div class="bg-zinc-900/80 border border-zinc-800 rounded-3xl p-8">
+        <div class="text-4xl mb-5">📄</div>
+        <h2 class="text-xl font-semibold mb-3">Full PDF analysis</h2>
+        <p class="text-zinc-400 leading-relaxed">
+          Upload a policy PDF and get automatic key-point summaries — what’s covered, what’s not, deductibles, duties, and watch-outs.
+        </p>
       </div>
-      <div class="bg-zinc-900 rounded-3xl p-10 hover:scale-105 transition-transform">
-        <div class="text-5xl mb-6">🔒</div>
-        <h3 class="text-2xl font-semibold mb-3">Private & Secure</h3>
-        <p class="text-zinc-400">Nothing is stored on our servers. Use your own OpenAI key for complete privacy.</p>
+      <div class="bg-zinc-900/80 border border-zinc-800 rounded-3xl p-8">
+        <div class="text-4xl mb-5">🔒</div>
+        <h2 class="text-xl font-semibold mb-3">Private by design</h2>
+        <p class="text-zinc-400 leading-relaxed">
+          History stays in your browser. Free summaries run through PolicySnap’s secure backend and OpenAI. Prefer full control? Use your own API key in Settings — it never leaves your device.
+        </p>
       </div>
-    </div>
+    </section>
 
     <!-- How it Works -->
-    <div class="bg-zinc-900 rounded-3xl p-12 mb-20">
-      <h2 class="text-3xl font-semibold text-center mb-12">How It Works</h2>
+    <section class="bg-zinc-900/80 border border-zinc-800 rounded-3xl p-10 md:p-12 mb-20">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center mb-10">How it works</h2>
       <div class="grid md:grid-cols-3 gap-10 text-center">
         <div>
-          <div class="w-16 h-16 mx-auto bg-zinc-800 rounded-2xl flex items-center justify-center text-3xl mb-6">1️⃣</div>
-          <h4 class="font-semibold mb-2">Open the Extension</h4>
-          <p class="text-zinc-400">Click the PolicySnap icon in your browser</p>
+          <div class="w-14 h-14 mx-auto bg-zinc-800 rounded-2xl flex items-center justify-center text-2xl mb-5">1</div>
+          <h3 class="font-semibold mb-2">Open PolicySnap</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Install from the Chrome Web Store and click the extension icon anytime.</p>
         </div>
         <div>
-          <div class="w-16 h-16 mx-auto bg-zinc-800 rounded-2xl flex items-center justify-center text-3xl mb-6">2️⃣</div>
-          <h4 class="font-semibold mb-2">Paste Policy Text</h4>
-          <p class="text-zinc-400">Copy any confusing section from your policy</p>
+          <div class="w-14 h-14 mx-auto bg-zinc-800 rounded-2xl flex items-center justify-center text-2xl mb-5">2</div>
+          <h3 class="font-semibold mb-2">Paste or upload a PDF</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Drop in confusing wording — or upload a full policy PDF for an automatic key-points summary.</p>
         </div>
         <div>
-          <div class="w-16 h-16 mx-auto bg-zinc-800 rounded-2xl flex items-center justify-center text-3xl mb-6">3️⃣</div>
-          <h4 class="font-semibold mb-2">Get Clear Answers</h4>
-          <p class="text-zinc-400">Understand coverage, exclusions, and what it really means for you</p>
+          <div class="w-14 h-14 mx-auto bg-zinc-800 rounded-2xl flex items-center justify-center text-2xl mb-5">3</div>
+          <h3 class="font-semibold mb-2">Read it like a human</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">Coverage, exclusions, money matters, and responsibilities — explained without the legalese.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Pro Teaser -->
-    <div class="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-3xl p-12 text-center mb-16">
-      <h2 class="text-3xl font-bold mb-4">Pro Features Coming Soon</h2>
-      <p class="text-zinc-400 mb-8 max-w-md mx-auto">
-        Unlimited summaries • Full PDF document analysis • Faster AI responses
+    <!-- Plans -->
+    <section class="grid md:grid-cols-2 gap-6 mb-20">
+      <div class="bg-zinc-900/80 border border-zinc-800 rounded-3xl p-8 md:p-10">
+        <div class="text-sm font-medium text-emerald-400 mb-2">Free</div>
+        <h2 class="text-2xl font-bold mb-3">Get started instantly</h2>
+        <p class="text-zinc-400 mb-6 leading-relaxed">
+          No payment, no account. Free summaries are powered securely by PolicySnap so you don’t need to set up AI keys to try it.
+        </p>
+        <ul class="space-y-3 text-zinc-300 text-sm">
+          <li class="flex gap-2"><span class="text-emerald-400">✓</span> 10 free AI summaries per month</li>
+          <li class="flex gap-2"><span class="text-emerald-400">✓</span> Paste text or upload policy PDFs</li>
+          <li class="flex gap-2"><span class="text-emerald-400">✓</span> Local history in your browser</li>
+          <li class="flex gap-2"><span class="text-emerald-400">✓</span> Custom app colors in Settings</li>
+        </ul>
+      </div>
+      <div class="bg-zinc-900/80 border border-emerald-500/30 rounded-3xl p-8 md:p-10">
+        <div class="text-sm font-medium text-blue-400 mb-2">Unlimited</div>
+        <h2 class="text-2xl font-bold mb-3">Use your own OpenAI key</h2>
+        <p class="text-zinc-400 mb-6 leading-relaxed">
+          Optional. Add your key in Settings for unlimited paste and PDF analysis. Your key stays on your device and is billed only to your OpenAI account.
+        </p>
+        <ul class="space-y-3 text-zinc-300 text-sm">
+          <li class="flex gap-2"><span class="text-emerald-400">✓</span> Unlimited summaries</li>
+          <li class="flex gap-2"><span class="text-emerald-400">✓</span> Unlimited PDF analysis</li>
+          <li class="flex gap-2"><span class="text-emerald-400">✓</span> Key stored only in Chrome on your device</li>
+          <li class="flex gap-2"><span class="text-emerald-400">✓</span> You control usage and billing</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="bg-zinc-900/60 border border-zinc-800 rounded-3xl p-8 md:p-10 mb-20">
+      <h2 class="text-2xl font-semibold mb-4">Privacy & how analysis works</h2>
+      <div class="space-y-4 text-zinc-400 leading-relaxed text-[15px]">
+        <p>
+          <strong class="text-zinc-200">Free tier:</strong>
+          When you summarize, policy text is sent to PolicySnap’s secure backend, then to OpenAI for analysis.
+          We use that only to generate your summary and enforce fair free limits — not to sell your data or build marketing profiles.
+        </p>
+        <p>
+          <strong class="text-zinc-200">Your own key:</strong>
+          Policy text goes from your browser to OpenAI using your key. PolicySnap does not receive or store that key.
+        </p>
+        <p>
+          <strong class="text-zinc-200">On your device:</strong>
+          Recent analyses and settings (including theme colors) are saved in Chrome storage on your computer — not in a PolicySnap account.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="text-center mb-16">
+      <h2 class="text-3xl font-bold mb-4">Stop re-reading the same fine print</h2>
+      <p class="text-zinc-400 mb-8 max-w-lg mx-auto">
+        Install PolicySnap and turn insurance language into something you can actually use.
       </p>
-      <div class="inline-flex items-center gap-2 bg-zinc-900 px-6 py-3 rounded-2xl">
-        <span class="text-emerald-400">●</span>
-        <span class="text-sm text-zinc-400">Currently Free — No payment required</span>
-      </div>
-    </div>
-
-    <!-- Final CTA -->
-    <div class="text-center">
-      <a href="https://chromewebstore.google.com/detail/aamiknhapnodkfinodfmblpmggpgfabh?utm_source=item-share-cb" 
-         target="_blank"
-         class="inline-block bg-white text-black font-semibold px-12 py-5 rounded-2xl text-xl hover:bg-zinc-200 transition-all">
+      <a href="https://chromewebstore.google.com/detail/aamiknhapnodkfinodfmblpmggpgfabh?utm_source=policysnap-site"
+         target="_blank" rel="noopener noreferrer"
+         class="inline-block bg-white text-zinc-900 font-semibold px-12 py-5 rounded-2xl text-lg hover:bg-zinc-200 transition-all">
         Install PolicySnap for Free
       </a>
-    </div>
+    </section>
 
-    <div class="text-center text-zinc-500 text-sm mt-16">
-      Made for people who are tired of reading confusing insurance documents.<br>
-      Privacy-first • No account needed • Built in Connecticut
-    </div>
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 pt-10 text-center text-sm text-zinc-500 space-y-4">
+      <p class="max-w-xl mx-auto leading-relaxed">
+        PolicySnap explains insurance language in plain English. It is <strong class="text-zinc-400">not legal advice</strong>
+        and may not cover every detail of your policy. Always refer to your full policy documents and a licensed professional when making decisions.
+      </p>
+      <p>
+        Privacy-first · No account needed · Built in Connecticut
+      </p>
+      <p>
+        <a href="./privacy.html" class="text-zinc-400 hover:text-emerald-400 underline underline-offset-2">Privacy Policy</a>
+        ·
+        <a href="https://chromewebstore.google.com/detail/aamiknhapnodkfinodfmblpmggpgfabh?utm_source=policysnap-site"
+           target="_blank" rel="noopener noreferrer"
+           class="text-zinc-400 hover:text-emerald-400 underline underline-offset-2">Chrome Web Store</a>
+      </p>
+      <p class="text-zinc-600">
+        © <span id="y"></span> PolicySnap
+      </p>
+    </footer>
   </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>

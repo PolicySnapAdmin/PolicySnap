@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PolicySnap</title>
+  <meta name="description" content="PolicySnap Privacy Policy: how free-tier and optional API-key analysis work, what is stored locally, and how OpenAI and Supabase are used.">
+  <meta name="theme-color" content="#18181b">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background:
+        radial-gradient(ellipse 80% 40% at 50% -10%, rgba(36, 32, 245, 0.18), transparent),
+        #09090b;
+    }
+    .prose-policy h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #f4f4f5;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .prose-policy p, .prose-policy li {
+      color: #a1a1aa;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .prose-policy ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0.75rem 0;
+    }
+    .prose-policy a {
+      color: #6ee7b7;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .prose-policy table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      margin: 1rem 0;
+    }
+    .prose-policy th, .prose-policy td {
+      border: 1px solid #3f3f46;
+      padding: 0.65rem 0.75rem;
+      text-align: left;
+      color: #d4d4d8;
+    }
+    .prose-policy th {
+      background: #27272a;
+      color: #f4f4f5;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="text-zinc-100 antialiased min-h-screen">
+  <div class="max-w-3xl mx-auto px-6 py-12 md:py-16">
+    <header class="flex items-center justify-between mb-10">
+      <a href="./" class="flex items-center gap-3 no-underline">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl shadow-lg"
+             style="background: linear-gradient(135deg, #2420f5, #25f352)">📋</div>
+        <span class="font-bold text-lg text-zinc-100">PolicySnap</span>
+      </a>
+      <a href="./" class="text-sm text-zinc-400 hover:text-white">← Home</a>
+    </header>
+
+    <article class="prose-policy bg-zinc-900/70 border border-zinc-800 rounded-3xl p-8 md:p-10">
+      <h1 class="text-3xl font-bold text-white mb-2">Privacy Policy</h1>
+      <p class="text-zinc-500 text-sm mb-8">Effective date: July 13, 2026 · Last updated: July 13, 2026</p>
+
+      <p>
+        PolicySnap (“we,” “our,” or “the Extension”) is a Chrome browser extension that helps people understand
+        insurance policy language using artificial intelligence (AI). This Privacy Policy describes what information
+        is processed when you use PolicySnap, how it is used, and the choices you have.
+      </p>
+      <p>
+        <strong class="text-zinc-200">Contact:</strong> For privacy questions, contact the developer through the
+        <a href="https://chromewebstore.google.com/detail/aamiknhapnodkfinodfmblpmggpgfabh" target="_blank" rel="noopener noreferrer">Chrome Web Store listing</a>
+        or the PolicySnapAdmin GitHub organization.
+      </p>
+
+      <h2>1. Summary</h2>
+      <table>
+        <thead>
+          <tr><th>Topic</th><th>What happens</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Account</td><td>No PolicySnap account is required</td></tr>
+          <tr><td>Free summaries</td><td>Policy text is sent to PolicySnap’s secure backend, then to OpenAI</td></tr>
+          <tr><td>Unlimited mode</td><td>Your own OpenAI key is used from your browser; we do not receive that key</td></tr>
+          <tr><td>Local device</td><td>History, settings, theme, free-usage cache, and optional key stay in Chrome storage</td></tr>
+          <tr><td>Selling data</td><td>We do not sell your personal information or insurance content</td></tr>
+        </tbody>
+      </table>
+
+      <h2>2. Information stored on your device</h2>
+      <p>PolicySnap uses Chrome’s local storage. This data stays on your device unless you clear it or uninstall the extension. It may include:</p>
+      <ul>
+        <li><strong class="text-zinc-300">Analysis history</strong> — labels for past requests and AI summaries</li>
+        <li><strong class="text-zinc-300">Optional OpenAI API key</strong> — only if you enter one in Settings</li>
+        <li><strong class="text-zinc-300">Install identifier</strong> — a random ID used to enforce free monthly limits</li>
+        <li><strong class="text-zinc-300">Free-usage cache</strong> — approximate remaining free summaries for the UI</li>
+        <li><strong class="text-zinc-300">Theme preferences</strong> — colors you choose in Settings</li>
+      </ul>
+      <p>We do not access your browsing history, other sites’ content, or your Google account through PolicySnap.</p>
+
+      <h2>3. Information processed when you run a summary</h2>
+      <p>When you paste text or upload a PDF and request a summary, the content you submit is processed to generate a response.</p>
+
+      <p><strong class="text-zinc-200">Free tier (default)</strong></p>
+      <ul>
+        <li>Text is sent to PolicySnap’s backend (hosted on Supabase infrastructure).</li>
+        <li>The backend sends that text to OpenAI to generate the summary.</li>
+        <li>The summary returns to the Extension and may be saved in local history.</li>
+        <li>Usage counts tied to your install ID and a hashed network signal help enforce free limits and reduce abuse.</li>
+      </ul>
+      <p>We do not intend to keep full policy documents as a permanent content archive on our servers.</p>
+
+      <p><strong class="text-zinc-200">Unlimited mode (your own OpenAI API key)</strong></p>
+      <ul>
+        <li>Text is sent directly from your browser to OpenAI.</li>
+        <li>PolicySnap does not receive or store that key on our servers.</li>
+        <li>OpenAI’s terms and privacy policy apply.</li>
+      </ul>
+
+      <p><strong class="text-zinc-200">PDF uploads</strong></p>
+      <p>Text extraction runs in your browser. Only extracted text sent for analysis follows the free-tier or own-key path above.</p>
+
+      <h2>4. How we use information</h2>
+      <ul>
+        <li>Provide AI summaries and key-point explanations</li>
+        <li>Enforce free monthly limits and reduce abuse</li>
+        <li>Remember history and settings on your device</li>
+        <li>Operate and secure the free-tier backend</li>
+      </ul>
+      <p>We do not use your insurance text to sell ads. OpenAI processes content under their own policies.</p>
+
+      <h2>5. Third-party services</h2>
+      <ul>
+        <li><strong class="text-zinc-300">OpenAI</strong> — generates summaries.
+          <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
+        <li><strong class="text-zinc-300">Supabase</strong> — hosts free-tier backend and usage limits.
+          <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Privacy policy</a></li>
+        <li><strong class="text-zinc-300">Google / Chrome Web Store</strong> — distributes the Extension</li>
+      </ul>
+      <p>PolicySnap’s free tier does not require payment. If paid upgrades are added later, this policy will be updated first.</p>
+
+      <h2>6. Data retention</h2>
+      <ul>
+        <li><strong class="text-zinc-300">Local data</strong> — until you clear storage or remove the Extension</li>
+        <li><strong class="text-zinc-300">Free-tier usage counters</strong> — as needed to enforce monthly limits</li>
+        <li><strong class="text-zinc-300">Submitted text</strong> — processed to produce a summary; not intended as a long-term document library on our servers</li>
+      </ul>
+
+      <h2>7. Your choices</h2>
+      <ul>
+        <li>Switch to your own OpenAI key in Settings</li>
+        <li>Remove your API key from the Extension</li>
+        <li>Clear Chrome local storage or uninstall PolicySnap</li>
+        <li>Only submit content you are comfortable sending for AI analysis</li>
+      </ul>
+
+      <h2>8. Children’s privacy</h2>
+      <p>PolicySnap is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
+
+      <h2>9. Security</h2>
+      <p>
+        Reasonable measures include keeping the free-tier OpenAI API key on the server (not in the Extension package),
+        restricting usage tables, and using HTTPS. No system is 100% secure. Avoid submitting passwords or unnecessary
+        sensitive identifiers in policy text.
+      </p>
+
+      <h2>10. International processing</h2>
+      <p>
+        Backend and third-party providers (including OpenAI and Supabase) may process data in the United States or
+        other countries that may have different privacy laws than your own.
+      </p>
+
+      <h2>11. Not legal advice</h2>
+      <p>
+        PolicySnap provides informational plain-language explanations only. It is <strong class="text-zinc-300">not legal advice</strong>,
+        insurance advice, or a substitute for your full policy documents or a licensed professional. AI output can be incomplete or incorrect.
+      </p>
+
+      <h2>12. Changes</h2>
+      <p>
+        We may update this policy from time to time. The “Last updated” date will change when we do. Material changes
+        may also appear in the Chrome Web Store listing or on our website.
+      </p>
+
+      <h2>13. Policy URLs</h2>
+      <ul>
+        <li><a href="https://policysnapadmin.github.io/PolicySnap/privacy.html">https://policysnapadmin.github.io/PolicySnap/privacy.html</a> (recommended for Chrome Web Store)</li>
+        <li><a href="https://raw.githubusercontent.com/PolicySnapAdmin/PolicySnap/main/Privacy.md">Raw Privacy.md on GitHub</a></li>
+      </ul>
+    </article>
+
+    <p class="text-center text-zinc-600 text-sm mt-10">
+      <a href="./" class="text-zinc-500 hover:text-zinc-300">Back to PolicySnap home</a>
+    </p>
+  </div>
+</body>
+</html>
